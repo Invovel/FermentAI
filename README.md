@@ -1,8 +1,8 @@
 # FermentAI 🧠⚡
 
-> **Agentic Knowledge Fermentation Engine** — Your data evolves like fine wine, not dead storage.
+> **Local Domain AI Ecosystem** — Research, Store, Ferment, Orchestrate. All on your own hardware.
 
-[📖 **中文文档**](README.zh.md) | [English](README.md)
+[English](README.md) | [📖 **中文文档**](README.zh.md)
 
 [![License](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![Python 3.10+](https://img.shields.io/badge/python-3.10+-blue.svg)](https://www.python.org/downloads/)
@@ -11,61 +11,147 @@
 
 ---
 
-**Build a domain-expert LLM on consumer hardware. No fine-tuning. No GPU cluster. No vendor lock-in.**
+**Not a RAG tool. Not a private server. It's an entire AI ecosystem that turns your laptop into a self-evolving domain-expert lab.**
 
 ---
 
-## 🎯 What FermentAI Solves
+## 🎯 One Sentence
 
-| Pain Point | FermentAI's Answer |
-|------------|-------------------|
-| Fine-tuning costs $$$ | **Zero training cost** — enhanced retrieval replaces weight updates |
-| Static vector DBs | **Living knowledge graph** — connections form and decay naturally |
-| Agent silos | **Multi-agent orchestration** — Claude, GPT, local LLMs share one brain |
-| Data privacy nightmares | **100% local deployment** — your data never leaves your server |
-| Knowledge rot | **Heat-driven curation** — hot topics surface, stale content fades |
+FermentAI is **three subsystems working as one** — auto research & data collection, knowledge fermentation & storage, and multi-agent orchestration — giving you a **self-evolving AI lab** that runs entirely locally.
+
+---
+
+## 🧩 What's Inside
+
+FermentAI is NOT a single tool. It's three coordinated subsystems:
+
+```
+┌─────────────────────────────────────────────────────────────────┐
+│                                                                  │
+│   Research-Skill              LLM-Wiki              Agent-team   │
+│   ┌──────────────┐       ┌──────────────┐       ┌─────────────┐ │
+│   │  Data Pipe   │  ──→  │ Fermentation │  ──→  │ Orchestrator│ │
+│   │              │       │   Engine     │       │             │ │
+│   │ arXiv search │       │ Knowledge    │       │ Claude      │ │
+│   │ GitHub scan  │       │ Graph        │       │ GPT         │ │
+│   │ Paper ingest │       │ Hotness/Decay│       │ Local LLM   │ │
+│   │ Auto-download│       │ Hybrid Search│       │ Dynamic route│ │
+│   └──────────────┘       └──────────────┘       └─────────────┘ │
+│         ↑                      ↑                      ↑         │
+│         └──────────────────────┼──────────────────────┘         │
+│                     Fermentation Engine                          │
+│              (connects, weights, evolves all data)               │
+│                                                                  │
+└─────────────────────────────────────────────────────────────────┘
+```
+
+| Subsystem | Role | Analogy |
+|-----------|------|---------|
+| **Research-Skill** | Auto data collection | The **hands** — searches, downloads, ingests |
+| **LLM-Wiki** | Knowledge fermentation & storage | The **memory** — stores, connects, ranks, decays |
+| **Agent-team** | Multi-agent orchestration | The **brain** — routes tasks, learns patterns, collaborates |
+
+**And the Fermentation Engine ties them all together** — data flows in, connections form, hotness rises and falls, agents learn from each other.
 
 ---
 
 ## 🔬 Core Innovation: Knowledge Fermentation
 
-> Like brewing — raw material (data) + yeast (usage) + time = value
+> Raw data → Usage traces → Auto-connections → Evolving intelligence
 
 ```
-Traditional:  Store → Query → Done (data stays dead)
-FermentAI:    Store → Query → Trace → Accumulate → Trigger → Evolve → Smarter queries
-               ↑_____________________________________________________________↓
+Traditional tools:
+  Search → Read → Forget (data is dead)
+
+FermentAI:
+  Research-Skill finds papers → LLM-Wiki stores & connects them
+  → You query → Agent-team routes to best LLM → Answer generated
+  → Trace recorded → High-frequency topics auto-trigger new research
+  → Knowledge graph updates weight → Everything gets smarter
+  → ↓
+  Next query benefits from everything that happened before
 ```
-
-**Three fermentation cycles:**
-
-| Cycle | Trigger | Action |
-|-------|---------|--------|
-| **Conversation → Knowledge** | Topic queried ≥ 3× in 30 days | Auto-download latest papers, link to conversations |
-| **Code → Knowledge** | Module reused ≥ 3× | Link to algorithm papers, insert citations, generate best-practice guides |
-| **Agent → Agent** | ≥ 10 task samples accumulated | Rank agents by task type, auto-route future tasks to best performers |
 
 ---
 
-## 🏗️ Architecture
+## 🏗️ Full Architecture
 
 ```
-┌──────────────────────────────────────────────────────────────┐
-│                    AGENT LAYER (Claude / GPT / Local LLM)     │
-│  Unified API Gateway  →  Agent Registry  →  Dynamic Router    │
-└────────────────────────────┬─────────────────────────────────┘
+┌──────────────────────────────────────────────────────────────────┐
+│                      USER INTERFACE                               │
+│    Obsidian (knowledge browser)  |  CLI  |  REST API  |  Web UI  │
+└────────────────────────────┬─────────────────────────────────────┘
                              ↓
-┌──────────────────────────────────────────────────────────────┐
-│                 FERMENTATION ENGINE                           │
-│  Triggers → Rules Engine → Executor → Insight Generator      │
-│  (high-freq query → auto-research)  (code reuse → link paper) │
-└────────────────────────────┬─────────────────────────────────┘
+┌──────────────────────────────────────────────────────────────────┐
+│                  AGENT-TEAM (Orchestrator)                        │
+│                                                                    │
+│  ┌──────────────┐  ┌──────────────┐  ┌──────────────┐           │
+│  │ Capability   │  │ Dynamic      │  │ Experience   │           │
+│  │ Registry     │→│ Router       │→│ Pool         │           │
+│  │              │  │              │  │              │           │
+│  │ Claude: bio  │  │ Task→Agent   │  │ "GPT always  │           │
+│  │ GPT: code    │  │ match+route  │  │  fails this"  │           │
+│  │ Local: review│  │ fallback     │  │ "Claude FTW" │           │
+│  └──────────────┘  └──────────────┘  └──────────────┘           │
+│                                                                    │
+│  Tasks are auto-routed. Agents learn from each other's results.   │
+└────────────────────────────┬─────────────────────────────────────┘
                              ↓
-┌──────────────────────────────────────────────────────────────┐
-│                 FOUR-TIER KNOWLEDGE VAULTS                    │
-│  Knowledge (Chroma)  │  Conversations  │  Code  │  Meta-Graph │
-│  papers · concepts   │  history · tags  │ snippets · patterns │
-└──────────────────────────────────────────────────────────────┘
+┌──────────────────────────────────────────────────────────────────┐
+│                   FERMENTATION ENGINE                             │
+│                                                                    │
+│  ┌─────────────┐    ┌─────────────┐    ┌─────────────┐          │
+│  │  Triggers   │───→│ Rule Engine │───→│  Executor   │          │
+│  │             │    │             │    │             │          │
+│  │ Query ≥ 3×  │    │ IF freq>3   │    │ Auto-search │          │
+│  │ Code reuse  │    │ → download  │    │ papers      │          │
+│  │ Task done   │    │ IF reuse>3  │    │ Update graph│          │
+│  │ Agent fail  │    │ → link paper│    │ Update heat │          │
+│  └─────────────┘    └─────────────┘    └─────────────┘          │
+│                                                                    │
+└────────────────────────────┬─────────────────────────────────────┘
+                             ↓
+┌──────────────────────────────────────────────────────────────────┐
+│                    LLM-WIKI (Knowledge Vaults)                    │
+│                                                                    │
+│  ┌────────────┐ ┌────────────┐ ┌────────────┐ ┌───────────────┐ │
+│  │ KNOWLEDGE  │ │CONVERSATION│ │    CODE    │ │   META-GRAPH  │ │
+│  │ (Chroma)   │ │ (Markdown) │ │  (Git)     │ │ (NetworkX)    │ │
+│  │            │ │            │ │            │ │               │ │
+│  │ papers     │ │ history    │ │ snippets   │ │ cross-vault   │ │
+│  │ concepts   │ │ topics     │ │ patterns   │ │ links         │ │
+│  │ summaries  │ │ ratings    │ │ benchmarks │ │ agent profiles│ │
+│  │ entities   │ │ sentiment  │ │ bug modes  │ │ heat distro   │ │
+│  │ vector idx │ │ tags       │ │ features   │ │ decay history │ │
+│  └────────────┘ └────────────┘ └────────────┘ └───────────────┘ │
+│                            ↑                                      │
+│              ┌─────────────┴─────────────┐                       │
+│              │     RESEARCH-SKILL        │                       │
+│              │  (Data Collection Pipe)   │                       │
+│              │                           │                       │
+│              │  arXiv API · GitHub API   │                       │
+│              │  HuggingFace · RSS/Arxiv  │                       │
+│              │  Auto-download · Ingest   │                       │
+│              └───────────────────────────┘                       │
+│                                                                    │
+└──────────────────────────────────────────────────────────────────┘
+```
+
+---
+
+## 🔄 The Complete Loop
+
+```
+1. Research-Skill searches arXiv → finds 5 papers → downloads → extracts text
+2. LLM-Wiki ingests → chunks → embeds → stores in knowledge vault
+3. You query: "RAG in protein design" 
+4. Agent-team routes → Claude (best for bio) → generates answer
+5. Fermentation traces: topic=RAG+protein, papers used, confidence=0.85
+6. Day 3: same topic queried again → hotness += 0.05
+7. Day 7: topic hit threshold → trigger fires → Research-Skill searches again
+8. Day 10: 3 new papers auto-downloaded, linked, notification pushed
+9. Meanwhile: Agent-team notices GPT keeps failing on protein folding
+   → updates agent profile → future protein tasks auto-route to Claude
 ```
 
 ---
@@ -79,82 +165,70 @@ git clone https://github.com/Invovel/FermentAI.git && cd FermentAI
 # Install
 pip install -r requirements.txt
 
-# Pull embedding model (Ollama)
-ollama pull nomic-embed-text
+# Pull models (Ollama)
+ollama pull nomic-embed-text    # Embedding
+ollama pull gemma4:e2b          # Generation
 
-# Build knowledge graph from your Obsidian vault
-export FERMENT_VAULT_PATH="/path/to/your/vault"
+# Initialize with your Obsidian vault
+set FERMENT_VAULT_PATH=D:\Obsidian\Hub\WikiVault
 python fermentai build
 
-# Start API server
+# Start the API server
 python fermentai serve
 ```
 
 ```python
-# Query your domain-expert system
+# Query your domain AI lab
 import requests
 r = requests.post("http://localhost:8000/query", json={
-    "query": "Latest advances in RAG for protein design",
+    "query": "Latest on diffusion models for protein design",
     "top_k": 5,
     "use_hyde": True,
-    "use_rerank": True
+    "use_rerank": True,
+    "prefer_agent": "auto"    # Let Agent-team decide
 })
 print(r.json()["answer"])
 ```
 
 ---
 
-## 📊 vs Traditional Approaches
+## 📊 vs Everything Else
 
-| | Fine-Tuning | Vanilla RAG | FermentAI |
-|--|:-:|:-:|:-:|
-| **Cost to build** | $$$$ GPU cluster | $$ Mid | $ **Consumer laptop** |
-| **Update cost** | Re-train | Re-index | **Auto-evolves** |
-| **Knowledge linking** | ❌ None | ❌ None | ✅ **Graph-driven** |
-| **Dynamic ranking** | ❌ Static | ❌ Static | ✅ **Heat-weighted** |
-| **Multi-agent** | ❌ | ❌ | ✅ **Capability router** |
-| **Explainability** | ❌ Black box | ⚠️ Partial | ✅ **Full provenance** |
-| **Privacy** | ⚠️ Cloud | ⚠️ Cloud | ✅ **100% local** |
+| | Fine-Tuning | Vanilla RAG | LangChain App | **FermentAI** |
+|--|:-:|:-:|:-:|:-:|
+| **Cost** | $$$$ GPU | $$ Cloud | $$ API | $ **Laptop** |
+| **Auto research** | ❌ | ❌ | ❌ | ✅ **Research-Skill** |
+| **Knowledge linking** | ❌ | ❌ | ❌ | ✅ **Fermentation graph** |
+| **Dynamic ranking** | ❌ | ❌ | ❌ | ✅ **Heat + decay** |
+| **Multi-agent** | ❌ | ❌ | ❌ | ✅ **Agent-team** |
+| **Agent learning** | ❌ | ❌ | ❌ | ✅ **Experience pool** |
+| **Privacy** | ⚠️ | ⚠️ | ⚠️ | ✅ **100% local** |
+| **Self-evolving** | ❌ | ❌ | ❌ | ✅ **Auto-improves** |
 
 ---
 
 ## 🎯 Use Cases
 
-### Lab Knowledge Hub
-> "Our bioinformatics lab has 10 years of papers. FermentAI connects them into a living graph — new members onboard in days, not months."
+### Lab AI Ecosystem
+> "Our lab runs FermentAI on a single server. Research-Skill auto-ingests papers daily. The fermentation engine links them to our existing knowledge. Agent-team routes complex bio queries to Claude, simple lookups to local LLM. New members query the entire lab's knowledge history."
 
-### Personal Compound Knowledge
-> "I query 'diffusion models' repeatedly. FermentAI noticed, auto-downloaded 3 new papers, and pushed a notification. My knowledge is actively growing."
+### Personal Research Accelerator
+> "I connected my Obsidian vault. FermentAI noticed I keep asking about protein language models — it auto-downloaded 3 new papers, linked them to my existing notes, and now Agent-team recommends which agent to use per query type."
 
-### Enterprise Asset Intelligence
-> "Company docs scattered across Confluence, GitHub, Slack. FermentAI unified them into one graph. Support agents query with precision. Dev agents reuse proven code."
-
----
-
-## 🛠️ Tech Stack
-
-| Component | Technology |
-|-----------|------------|
-| Vector DB | Chroma (local, lightweight) |
-| Knowledge Graph | Custom graph engine (NetworkX + weighted edges) |
-| Embedding | Ollama `nomic-embed-text` (free, local) |
-| Generation | Ollama / Claude / OpenAI / any compatible API |
-| Retrieval | Hybrid: Vector + BM25 + RRF fusion + Cross-Encoder rerank |
-| Query Enhancement | Multi-Query expansion + HyDE (Hypothetical Document Embeddings) |
-| Frontend | Obsidian (vault browser) + FastAPI (REST API) |
+### Enterprise Knowledge Platform
+> "Company docs, code repos, Slack discussions → all fed into FermentAI. The fermentation engine connects everything. Support agents query with provenance. Dev agents reuse proven code patterns. The system learns which agent is best for which task."
 
 ---
 
 ## 🗺️ Roadmap
 
-- [x] Knowledge graph construction
-- [x] Heat-driven retrieval
-- [x] Core fermentation rules
-- [ ] Multi-agent capability registry & router
-- [ ] Auto literature search & ingest
-- [ ] Code-paper auto-linking
-- [ ] Cross-lab knowledge federation
-- [ ] Web UI dashboard
+| Phase | Status | Focus |
+|-------|:------:|-------|
+| **Core Engine** | ✅ Done | Knowledge graph, heat-driven retrieval, core fermentation rules |
+| **Agent-team** | 🚧 Now | Capability registry, dynamic task routing, experience pool |
+| **Research-Skill Integration** | 🚧 Now | Auto literature search, paper ingest pipeline, trigger-based collection |
+| **Code Vault** | 📋 Next | Code-paper linking, bug pattern learning, multi-agent code review |
+| **Cross-lab Federation** | 🔮 Future | Federated knowledge sharing, privacy-preserving agent collaboration |
 
 ---
 
@@ -164,7 +238,8 @@ print(r.json()["answer"])
 |----------|---------|
 | [Architecture](docs/architecture.md) | Full system design & data flow |
 | [Fermentation](docs/fermentation.md) | Trigger-rule-executor mechanism |
-| [Agent Integration](docs/agent-integration.md) | Multi-agent protocol |
+| [Agent Integration](docs/agent-integration.md) | Multi-agent protocol & Agent-team |
+| [Research-Skill](docs/research-skill.md) | Auto data collection pipeline |
 | [API Reference](docs/api.md) | REST API endpoints |
 | [Deployment](docs/deployment.md) | Lab server setup |
 | [Expert Consultation](docs/expert-consultation.md) | Questions for domain experts |
@@ -175,10 +250,10 @@ print(r.json()["answer"])
 
 We are actively seeking guidance from:
 
-- **LLM Architects** — multi-agent orchestration, hallucination mitigation
-- **Knowledge Graph Experts** — large-scale graph construction, temporal KG
-- **RAG Researchers** — advanced retrieval, domain adaptation, evaluation
-- **Lab PIs** — real-world knowledge management, workflow integration
+- **LLM Architects** — multi-agent orchestration, capability routing, experience sharing
+- **Knowledge Graph Experts** — large-scale dynamic graphs, temporal weighting
+- **RAG Researchers** — advanced retrieval, domain adaptation, hallucination mitigation
+- **Lab PIs & Researchers** — real knowledge management pain points, workflow integration
 
 📧 **Contact**: indegceyuan@outlook.com
 
@@ -203,6 +278,6 @@ Built on the shoulders of giants:
 ---
 
 <p align="center">
-  <b>Ferment Knowledge, Grow Intelligence</b><br>
-  <i>Made with ❤️ by <a href="https://github.com/Invovel">Invovel</a></i>
+  <b>Research. Store. Ferment. Orchestrate.</b><br>
+  <i>Your local AI ecosystem — by <a href="https://github.com/Invovel">Invovel</a></i>
 </p>
