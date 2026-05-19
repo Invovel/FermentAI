@@ -235,6 +235,7 @@ print(r.json()["answer"])
 
 | 文档 | 内容 |
 |------|------|
+| [愿景文档](docs/VISION.md) | 🌟 FermentAI 为什么存在 — 完整思路与哲学 |
 | [架构设计](docs/architecture.md) | 完整系统设计与数据流 |
 | [发酵机制](docs/fermentation.md) | 触发器-规则-执行器详解 |
 | [Agent接入](docs/agent-integration.md) | 多Agent协议与Agent-team |

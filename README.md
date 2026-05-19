@@ -236,6 +236,7 @@ print(r.json()["answer"])
 
 | Document | Content |
 |----------|---------|
+| [Vision](docs/VISION.md) | 🌟 Why FermentAI exists — full story & philosophy |
 | [Architecture](docs/architecture.md) | Full system design & data flow |
 | [Fermentation](docs/fermentation.md) | Trigger-rule-executor mechanism |
 | [Agent Integration](docs/agent-integration.md) | Multi-agent protocol & Agent-team |
